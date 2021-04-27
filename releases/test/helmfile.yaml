@@ -1,0 +1,16 @@
+environments:
+  {{ .Environment.Name }}:
+
+repositories:
+  - name: dysnix
+    url: https://dysnix.github.io/charts
+
+release:
+  - name: {{ .release.name | default "test" }}
+    namespace: {{ .release.namespace | default "default" }}
+    chart: dysnix/app
+    values:
+    -
+      name: test-app-nginx
+      image:
+        repository: nginx
