@@ -1,5 +1,7 @@
 environments:
   {{ .Environment.Name }}:
+    values:
+      - release:
 
 repositories:
   - name: dysnix
