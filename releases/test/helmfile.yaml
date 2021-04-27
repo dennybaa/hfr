@@ -9,7 +9,7 @@ repositories:
 
 release:
   - name: {{ .Values | get "release.name" "test" }}
-    namespace: {{ .Values | gret "release.namespace" "default" }}
+    namespace: {{ .Values | get "release.namespace" "default" }}
     chart: dysnix/app
     values:
     -
