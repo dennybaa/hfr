@@ -5,7 +5,7 @@ repositories:
   - name: dysnix
     url: https://dysnix.github.io/charts
 
-release:
+releases:
   - name: {{ .Values | get "release.name" "test" }}
     namespace: {{ .Values | get "release.namespace" "default" }}
     chart: dysnix/app
