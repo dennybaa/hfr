@@ -8,8 +8,8 @@ repositories:
     url: https://dysnix.github.io/charts
 
 release:
-  - name: {{ .release.name | default "test" }}
-    namespace: {{ .release.namespace | default "default" }}
+  - name: {{ .Values | get "release.name" "test" }}
+    namespace: {{ .Values | gret "release.namespace" "default" }}
     chart: dysnix/app
     values:
     -
