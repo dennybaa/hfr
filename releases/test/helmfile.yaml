@@ -16,4 +16,4 @@ releases:
         repository: nginx
 
       podAnnotations:
-        hello/world: {{ .Values.MYSUPPER }}
+        hello/world: {{ .Values.foo }}
