@@ -14,3 +14,6 @@ releases:
       name: test-app-nginx
       image:
         repository: nginx
+
+      podAnnotations:
+        hello/world: {{ .Values.MYSUPPER }}
