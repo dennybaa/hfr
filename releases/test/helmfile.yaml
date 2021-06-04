@@ -18,7 +18,7 @@ releases:
     chart: dysnix/app
     values:
     -
-      name: nginx
+      name: {{ .Values | get "release.name" }}
       image:
         repository: nginx
 
