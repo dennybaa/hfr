@@ -3,6 +3,7 @@ environments:
     values:
       -
         release: nginx
+---
 
 repositories:
   - name: dysnix
