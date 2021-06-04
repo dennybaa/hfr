@@ -3,7 +3,7 @@ environments:
     values:
       -
         release:
-          name: {{ .Values | get "release.name" nginx }}
+          name: {{ .Values | get "release.name" "nginx" }}
           namespace: {{ .Values | get "release.namespace" nil }}
 ---
 
