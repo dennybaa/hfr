@@ -2,7 +2,8 @@ environments:
   {{ .Environment.Name }}:
     values:
       -
-        release: nginx
+        release:
+          name: nginx
 ---
 
 repositories:
