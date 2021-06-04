@@ -1,17 +1,22 @@
 environments:
   {{ .Environment.Name }}:
+    values:
+      -
+        release: nginx
 
 repositories:
   - name: dysnix
     url: https://dysnix.github.io/charts
 
 releases:
-  - name: {{ .Values | get "release.name" "test" }}
-    namespace: {{ .Values | get "release.namespace" "default" }}
+  - name: {{ .Values | get "release.name" }}
+    namespace: {{ .Values | get "release.namespace" nil }}
+    ## ... maybe more to follow / .Values.release.*
+    ##     offer proper rendring which finished correctly
     chart: dysnix/app
     values:
     -
-      name: test-app-nginx
+      name: nginx
       image:
         repository: nginx
 
